@@ -48,10 +48,13 @@
           return false;
         },
       isSunk: function(ship) {
+        var count = 0
         for (var i = 0; i < this.shipLength; i++) {
           if (ship.hits[i] !== "hit") {
-            return false;
+            count++;
+            
           }
+          return false;
         }
         return true;
       },
